@@ -7,9 +7,9 @@ export const apiCall = ({
 })=>{
     
  try{
-    const x = fetch(url, {method, body, headers})
-    x.then((res)=> {return res.json()})
-    }
+    return fetch(url, {method, body, headers})
+    .then((res)=> {return res.json()})
+        }
     catch(error){
         Promise.reject(error)
         console.log("ocurrió un error en la carga");
